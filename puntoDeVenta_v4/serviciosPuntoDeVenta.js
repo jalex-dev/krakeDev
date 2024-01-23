@@ -17,13 +17,15 @@ calcularSubtotal=function(precio,cantidad){
     let subtotal=precio*cantidad;
     return subtotal;
 }
-calcularTotal=function(subtotal,descuento,iva){
-    /*este metodo recibe tres parametros: el subtotal, el descuento y
-    el Iva. Devuelve el total a pagar, que es el subtotal menos
-    el descuento mas el Iva*/
-    let total=(subtotal-descueno)+iva;
+// Declarar la función calcularTotal
+calcularTotal=function (subtotal, descuento, iva) {
+    /* Este método recibe tres parámetros: el subtotal, el descuento y
+    el IVA. Devuelve el total a pagar, que es el subtotal menos
+    el descuento más el IVA. */
+    let total = (subtotal - descuento) + iva;
     return total;
 }
+
 
 probarFunciones=function(){
     console.log("prueba de la función");
