@@ -10,11 +10,20 @@ saludar=function(){
     let mensajeBienvenida="Bienvenido "+nombre+" "+apellido;
     mostrarTexto("lblResultado",mensajeBienvenida);
     mostrarImagen("imgSaludo","./imagenes/saludo.gif")
+
+    mostraTextoEncaja("txtNombre"," ")
 }
 mostrarTexto=function(idComponente, mensaje){
     let componente;
     componente = document.getElementById(idComponente);
     componente.innerText = mensaje;
+}
+
+mostraTextoEncaja=function(idComponente,mensaje){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.value=mensaje;
+
 }
 
 recuperarTexto=function(idComponente){
