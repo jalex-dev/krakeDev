@@ -8,19 +8,26 @@ saludar=function(){
     let edad = recuperarInt("txtEdad");
     let estatura = recuperarFloat("txtEstatura");
     let mensajeBienvenida="Bienvenido "+nombre+" "+apellido;
-    mostrarTexto("lblResultado",mensajeBienvenida)
+    mostrarTexto("lblResultado",mensajeBienvenida);
+    mostrarImagen("imgSaludo","./imagenes/saludo.gif")
 }
 mostrarTexto=function(idComponente, mensaje){
     let componente;
     componente = document.getElementById(idComponente);
     componente.innerText = mensaje;
 }
+
 recuperarTexto=function(idComponente){
     let componente;
     let valorIngresado;
     componente = document.getElementById(idComponente);
     valorIngresado=componente.value;
     return valorIngresado;
+}
+mostrarImagen=function(idComponente,rutaImagen){
+    let imagen;
+    imagen=document.getElementById(idComponente);
+    imagen.src=rutaImagen;
 }
 
 recuperarInt = function(idComponente){
