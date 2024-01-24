@@ -10,5 +10,10 @@ calcularPromedioNotas=function(){
     promedio =calcularPromedio(nota1,nota2,nota3);
 
     cambiarTexto("lblPromedio",promedio)
+    if(promedio>7){
+        cambiarImagen("imagenPromodio","./imagenes/ganador.gif");
+    }else{
+        cambiarImagen("imagenPromodio","./imagenes/perdedor.gif")
+    }
 
 }
