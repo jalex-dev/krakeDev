@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.cont-img:hover {
+    background-color: white;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+.contenedor-imagenes img {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Agregamos transición para suavizar el efecto */
+}
+
+/* Agregamos una clase para aplicar el sombreado cuando la imagen está seleccionada */
+.contenedor-imagenes img.seleccionada {
+    box-shadow: 20px 20px 10px 5px rgba(123, 20, 20, 0.5); /* Establecemos el sombreado */
+}
+
+.resultado {
+    margin-top: 20px;
+}
+
+#imagenComputadora {
+    max-width: 100px;
+    margin: 10px;
+}
+
+#resultadoPartida {
+    font-weight: bold;
+    color: #333;
+}

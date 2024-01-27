@@ -14,7 +14,7 @@ obtenerAleatorio = function () {
 }
 generarElemento = function () {
     //genera randomicamente las cadenas "piedras", papel o tijera
-    let elemento = obtengerAleatorio();
+    let elemento = obtenerAleatorio();
     if (elemento == 1) {
         return 'piedra';
     }
