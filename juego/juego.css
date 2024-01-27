@@ -19,14 +19,16 @@ h1 {
     color: #4CAF50;
     border: 1px solid #4CAF50;
 }
+
 .contenedor-imagenes img {
     cursor: pointer;
+    max-width: 200px; /* Establecemos el ancho máximo de las imágenes */
     transition: box-shadow 0.3s ease; /* Agregamos transición para suavizar el efecto */
 }
 
 /* Agregamos una clase para aplicar el sombreado cuando la imagen está seleccionada */
 .contenedor-imagenes img.seleccionada {
-    box-shadow: 20px 20px 10px 5px rgba(123, 20, 20, 0.5); /* Establecemos el sombreado */
+    box-shadow: 0 0 10px 5px rgba(123, 20, 20, 0.5); /* Establecemos el sombreado */
 }
 
 .resultado {
