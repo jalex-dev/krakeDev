@@ -185,3 +185,24 @@ obtenerTipoVehiculo=function(placa){
      return "vehículo Incorrecto";
 
 }
+
+obtenerDiaPicoYPlaca=function(placa) {
+    // Obtener el último dígito de la placa
+    let ultimoDigito = placa.charAt(placa.length - 1);
+
+    // Asignar día de Pico y Placa basado en el último dígito
+    if (ultimoDigito == 1 || ultimoDigito == 2) {
+        return "Lunes";
+    } else if (ultimoDigito == 3 || ultimoDigito == 4) {
+        return "Martes";
+    } else if (ultimoDigito == 5 || ultimoDigito == 6) {
+        return "Miércoles";
+    } else if (ultimoDigito == 7 || ultimoDigito == 8) {
+        return "Jueves";
+    } else if (ultimoDigito == 9 || ultimoDigito == 0) {
+        return "Viernes";
+    } else {
+        return "Libre circulación (Sábado, Domingo o Feriado)";
+    }
+}
+
