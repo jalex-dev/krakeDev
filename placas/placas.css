@@ -43,48 +43,50 @@ body{
       align-items: center;
     
   }
-  .estiloBoton{
-      background-color: #4CAF50; 
-      border: none;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 16px;
-      border-radius: 5px;
-  
-  }
-  .estiloBoton:hover {
-      background-color:white; 
-      color: #4CAF50;
-      border:1px;
-      border-color: #4CAF50;
-      border-radius: 5px;
-  }
-  .estiloBoton:active{
-      background-color: #4CAF50; 
-      border: none;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 16px;
-      border-radius: 5px;
-  
-  }
-  .botones{
+  /* Estilos para el contenedor de botones */
+  .botones {
       display: flex;
       flex-direction: row;
       justify-content: center;
       margin-top: 20px;
   }
-  .contenedorBoton{
+  
+  /* Estilos para el contenedor interno de botones */
+  .contenedorBoton {
       display: flex;
-      flex:1;
-      justify-content: center;
+      justify-content: space-between; /* Espaciado entre los botones */
+      flex: 1; /* Ocupa el espacio disponible */
   }
+  
+  /* Estilos para los botones */
+  .estiloBoton {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 5px;
+      width: 48%; /* Ancho del botón al 48% del contenedor */
+  }
+  
+  /* Estilos para el estado hover de los botones */
+  .estiloBoton:hover {
+      background-color: white;
+      color: #4CAF50;
+      border: 1px solid #4CAF50;
+  }
+  
+  /* Estilos para el estado activo de los botones */
+  .estiloBoton:active {
+      background-color: #4CAF50;
+      color: white;
+  }
+  
   .cajaTexto{
       border-radius: 4px;
       border-color: #4CAF50;
-      
+      justify-content: center;
       font-size: 20px;
       color:rgb(85, 83, 83);
   }
@@ -92,7 +94,7 @@ body{
       padding: 10px;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: right;
       font-family: Arial, Helvetica, sans-serif;
   }
   .tituloCampo{
@@ -105,7 +107,7 @@ body{
   }
   .resultado{
       display: flex;
-      flex:1;
+  
       flex-direction: row;
       font-size: 20px;
       font-family: Arial, Helvetica, sans-serif;
