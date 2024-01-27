@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="placas.css" />
+    <script src="placas.js"></script>
+    <script src="servicioPlacas.js"></script>
+    <script src="utilitarios.js"></script>
+    <script src="utilitarioCadenas.js"></script>
+</head>
+
+<body>
+    <div class="principal">
+        
+        <div class="contenido">
+            <div class="titulo">
+                VALIDAR PLACA
+            </div>
+
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    INGRESE PLACA
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtPlaca" />
+                    <div class="error" id="lblError1"></div>
+                </div>
+            </div>
+
+
+            <div class="botones">
+                <div class="contenedorBoton">
+                    <input type="button" value="VALIDAR" class="estiloBoton" onclick="validarPlaca()" />
+                </div>
+            </div>
+
+        </div>
+        <div class="areaResultado">
+            <div class="resultado">
+
+                <div id="lblValida">
+
+                </div>
+            </div>
+            <div class="resultado">
+
+                <div id="lblMensaje">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
