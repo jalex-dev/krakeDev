@@ -24,10 +24,12 @@ guardarPalabra=function(){
             if (!esMayuscula(caracter)) {
                 alert("DEBE INGRESAR UNA PALABRA DE CINCO LETRAS MAYUSUCLAS")
             }    
+            mostrarLetra(caracter,i)
         }  
         palabraSecreta=palabra;     
     }
     console.log(palabraSecreta)
+    
 
 }
 
@@ -37,4 +39,10 @@ validarPalabra=function(palabra) {
     } else {
         return false;
     }
+}
+
+mostrarLetra=function(letra,posicion){
+    //si es la possion 0 muestra en la letra en el div 0, si enn la posicion 1 muestra la letra en el div 1 asi sucesivamente 
+    let div = "div"+posicion
+    mostrarTexto(div,letra)
 }
