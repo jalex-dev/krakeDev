@@ -1,6 +1,7 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
 let palabraSecreta;
-esMayuscula=function(caracter) {
+let letrasEncontrada = 0;
+esMayuscula = function (caracter) {
     let code = caracter.charCodeAt();
 
     // Rango de códigos ASCII correspondiente a las letras mayúsculas A-Z
@@ -11,38 +12,54 @@ esMayuscula=function(caracter) {
     }
 }
 // Función para ingresar palabras secretas 
-guardarPalabra=function(){
+guardarPalabra = function () {
     let palabra;
     let caracter;
     tieneMiniscula = false;
     palabra = recuperarTexto("txtSecreta")
     if (!validarPalabra(palabra)) {
         alert("DEBE INGRESAR UNA PALABRA DE CINCO LETRAS MAYUSUCLAS")
-    }else{
+    } else {
         for (let i = 0; i < palabra.length; i++) {
             caracter = palabra.charAt(i);
             if (!esMayuscula(caracter)) {
                 alert("DEBE INGRESAR UNA PALABRA DE CINCO LETRAS MAYUSUCLAS")
-            }    
-            mostrarLetra(caracter,i)
-        }  
-        palabraSecreta=palabra;     
+            }
+            mostrarLetra(caracter, i)
+        }
+        palabraSecreta = palabra;
     }
     console.log(palabraSecreta)
-    
+
 
 }
 
-validarPalabra=function(palabra) {
-    if (palabra.length  <= 5) {
+validarPalabra = function (palabra) {
+    if (palabra.length <= 5) {
         return true;
     } else {
         return false;
     }
 }
 
-mostrarLetra=function(letra,posicion){
+mostrarLetra = function (letra, posicion) {
     //si es la possion 0 muestra en la letra en el div 0, si enn la posicion 1 muestra la letra en el div 1 asi sucesivamente 
-    let div = "div"+posicion
-    mostrarTexto(div,letra)
+    let div = "div" + posicion
+    mostrarTexto(div, letra)
+}
+
+validar = function (letra) {
+
+    // Recorrer cada caracter de la palabra secreta
+    for (let i = 0; i < palabraSecreta.length; i++) {
+        // Verificar si la letra actual coincide con la letra recibida como parámetro
+        if (palabraSecreta.charAt(i) == letra) {
+            // Llamar a la función mostrarLetra para mostrar la letra en la posición correspondiente
+            mostrarLetra(letra, i);
+
+            // Incrementar la variable letrasEncontradas en 1
+            letrasEncontradas = +1;
+        }
+    }
+
 }
