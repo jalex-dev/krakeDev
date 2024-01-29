@@ -30,8 +30,6 @@ mostrarResultados = function (arregloNumeros) {
         contenidoTable +="<tr><td>"+numero+"</td></tr>";
     }       
     contenidoTable += "</table>";
-    resultadosDiv.innerHTML = contenidoTable;
-
-    
-   
+    resultadosDiv.innerHTML = contenidoTable;   
 }
+
