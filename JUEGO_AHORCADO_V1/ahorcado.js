@@ -66,7 +66,8 @@ validar = function (letra) {
     }
     if (letraEncontada == false) {
         alert("LA LETRA NO ES PARTE DE LA PALABRA");
-        errores=errores+1;
+        errores = errores + 1;
+        mostrarAhorcado(errores)
     }
 
 
@@ -87,11 +88,18 @@ ingresarLetra = function () {
 
 mostrarMensajeAlert = function () {
     if (coincidencias == 5) {
-        let mensaje = "¡Felicidades! Has ganado el juego";
+        let mensaje = "HAS GANADO";
         alert(mensaje)
     }
     if (intentos >= 10) {
-        let mensaje = "Perdiste :( La palabra era " + palabraSecreta;
+        let mensaje = "HA PERDIDO";
         alert(mensaje)
     }
+}
+mostrarAhorcado = function () {
+    if (errores > 0&& errores < 10) {
+        let ruta = "Ahorcado_0" + errores + ".png";
+        mostrarImagen("ahorcadoImagen", ruta);
+    }
+
 }
