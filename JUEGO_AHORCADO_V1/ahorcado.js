@@ -88,16 +88,18 @@ ingresarLetra = function () {
 
 mostrarMensajeAlert = function () {
     if (coincidencias == 5) {
-        let mensaje = "HAS GANADO";
-        alert(mensaje)
+
+        mostrarImagen("ahorcadoImagen", "ganador.gif");
+
     }
     if (intentos >= 10) {
-        let mensaje = "HA PERDIDO";
-        alert(mensaje)
+        
+        mostrarImagen("ahorcadoImagen", "gameOver.gif");
+
     }
 }
 mostrarAhorcado = function () {
-    if (errores > 0&& errores < 10) {
+    if (errores > 0 && errores < 10) {
         let ruta = "Ahorcado_0" + errores + ".png";
         mostrarImagen("ahorcadoImagen", ruta);
     }
