@@ -37,7 +37,7 @@ guardarPalabra = function () {
 }
 
 validarPalabra = function (palabra) {
-    if (palabra.length <= 5) {
+    if (palabra.length == 5) {
         return true;
     } else {
         return false;
