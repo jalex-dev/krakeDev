@@ -78,12 +78,30 @@ body{
     align-items: center;
     justify-content: center;
 }
+.miTabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.miTabla th, .miTabla td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.miTabla th {
+    background-color: #651313;
+}
+
 tbody tr:nth-child(odd) {
-    background-color: #908efc;
+    background-color: #4140a4;
+    color: white;
   }
   
   tbody tr:nth-child(even) {
     background-color: #6a51cf;
+    color: white;
   }
   
   tbody tr {
@@ -97,6 +115,7 @@ tbody tr:nth-child(odd) {
   td{
     text-align: center;
   }
+
   .areaTabla{
     margin-top: 20px;
   }
