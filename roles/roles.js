@@ -12,13 +12,16 @@ mostrarOpcionEmpleado = function () {
     ocultarComponente("divResumen")
     mostrarEmpleados();
 
+    desavilitarCajaEmpleado();
+
+
+}
+desavilitarCajaEmpleado=function(){
     deshabilitarComponente("txtCedula");
     deshabilitarComponente("txtNombre");
     deshabilitarComponente("txtApellido");
     deshabilitarComponente("txtSueldo");
     deshabilitarComponente("btnGuardar");
-
-
 
 }
 mostrarOpcionRol = function () {
