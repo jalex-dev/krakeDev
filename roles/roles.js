@@ -258,3 +258,14 @@ mostrarCampos = function (empleado) {
     habilitarComponente("btnGuardar");
 
 };
+
+limpiarCamposEmpleado=function(){
+    mostrarTextoEnCaja("txtCedula", "");
+    mostrarTextoEnCaja("txtNombre", "");
+    mostrarTextoEnCaja("txtApellido", "");
+    mostrarTextoEnCaja("txtSueldo", "");
+
+    desavilitarCajaEmpleado();
+    esNuevo=false;
+
+}
