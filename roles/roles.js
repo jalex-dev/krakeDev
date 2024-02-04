@@ -234,7 +234,6 @@ crearNuevo = function (cedula, nombre, apellido, sueldo) {
 }
 
 ejecutarBusquedad = function () {
-    desavilitarCajaEmpleado();
     let cedula = recuperarTexto("txtBusquedaCedula");
     let resultadoBusquedad = buscarEmpleado(cedula);
     if (resultadoBusquedad == null) {
@@ -267,5 +266,24 @@ limpiarCamposEmpleado=function(){
 
     desavilitarCajaEmpleado();
     esNuevo=false;
+
+}
+
+//reto 49
+
+buscarPorRol=function(){
+    let cedula = recuperarTexto("txtBusquedaCedulaRol");
+    let resultadoBusquedad = buscarEmpleado(cedula);
+    if (resultadoBusquedad == null) {
+        alert("EMPLEADO NO EXISTE")
+    } else {
+        mostrarCamposRol(resultadoBusquedad);
+    }
+}
+
+mostrarCamposRol=function(empleado){
+    mostrarTexto("infoCedula",empleado.cedula);
+    mostrarTexto("infoNombre",empleado.nombre + " " + empleado.apellido);
+    mostrarTexto("infoSueldo",empleado.sueldo);
 
 }
