@@ -287,3 +287,38 @@ mostrarCamposRol=function(empleado){
     mostrarTexto("infoSueldo",empleado.sueldo);
 
 }
+
+// Calcula el 9.45% del sueldo del empleado y retorna el valor.
+// Por ejemplo, si el empleado gana 100, retorna 9.45.
+calcularAporteEmpleado = function(sueldo) {
+    let aporte;
+    aporte = sueldo * 0.0945;
+    return aporte;
+};
+
+calcularValorAPagar=function(sueldo,aporteIess,descuento){
+    // calcula el valor a pagar al empleado, restando del sueldo el valor de
+    //aporte del empleado y el descueto, retorna el valor
+    let totalAPagar;
+    totalAPagar=(sueldo-aporteIess-descuento);
+    return totalAPagar;
+}
+
+calcularRol=function(){
+    let sueldo =recuperarFloatDiv("infoSueldo");
+    let descuentos =recuperarFloat("txtDescuentos");
+
+    // Validar que descuentos sea un número flotante, y esté en el rango de 0 a sueldo del empleado
+    if (isNaN(descuentos) || descuentos < 0 || descuentos > sueldo) {
+        mostrarTexto("lblErrorDescuentos","Ingrese un valor de descuento válido.");
+        return;
+    }
+
+    // Invocar a la función calcularAporteEmpleado y mostrar el resultado
+    let aporteEmpleado = calcularAporteEmpleado(sueldo);
+    mostrarTexto("infoIESS" , aporteEmpleado);
+
+    // Invocar a la función calcularValorAPagar y mostrar el resultado
+    let valorAPagar = calcularValorAPagar(sueldo,aporteEmpleado, descuentos);
+    mostrarTexto("infoPago",valorAPagar);
+}
