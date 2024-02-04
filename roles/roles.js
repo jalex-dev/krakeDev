@@ -106,6 +106,7 @@ guardar = function () {
             if (returnEmpleado == true) {
                 alert("EMPLEADO GUARDO CORRECTAMENTE");
                 mostrarEmpleados();
+                desavilitarCajaEmpleado();
             }else{
                 alert("YA EXITE UN EMPLEADO CON LA CEDULA: " + cedula)
             }
